@@ -65,7 +65,7 @@ const Drawer = ({
               className="flex-grow"
               icon={<BiPlus />}
               border
-              text="新建对话"
+              text="New Agent"
               onClick={() => location.reload()}
             />
             <button
