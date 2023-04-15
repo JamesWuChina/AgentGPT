@@ -290,13 +290,13 @@ const getMessageIcon = (message: Message) => {
 const getMessagePrefix = (message: Message) => {
   switch (message.type) {
     case "goal":
-      return "Embarking on a new goal:";
+      return "正在创建新的目标:";
     case "task":
-      return "Added task:";
+      return "增加新任务:";
     case "thinking":
-      return "Thinking...";
+      return "努力计算中...";
     case "action":
-      return message.info ? message.info : "Executing:";
+      return message.info ? message.info : "执行:";
   }
 };
 

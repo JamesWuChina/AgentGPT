@@ -192,7 +192,7 @@ const Home: NextPage = () => {
                 ) : (
                   <>
                     <VscLoading className="animate-spin" size={20} />
-                    <span className="ml-2">Running</span>
+                    <span className="ml-2">正在运行中</span>
                   </>
                 )}
               </Button>
