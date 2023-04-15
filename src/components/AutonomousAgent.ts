@@ -110,7 +110,7 @@ class AutonomousAgent {
       }
 
       if (newTasks.length == 0) {
-        this.sendActionMessage("Task marked as complete!");
+        this.sendActionMessage("任务完成!");
       }
     } catch (e) {
       console.log(e);
@@ -130,7 +130,7 @@ class AutonomousAgent {
 
     const res = await axios.post(`/api/chain`, {
       modelSettings: this.modelSettings,
-      goal: this.goal,
+      goal: "请用中文"+this.goal,
     });
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-argument
