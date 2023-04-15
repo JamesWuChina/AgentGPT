@@ -89,8 +89,7 @@ const Drawer = ({
 
             {userAgents.length === 0 && (
               <div>
-                Click the above button to restart. In the future, this will be a
-                list of your deployed agents!
+               点击上面的按钮重新启动!
               </div>
             )}
           </ul>
@@ -108,30 +107,7 @@ const Drawer = ({
             <AuthItem session={session} signIn={signIn} signOut={signOut} />
           )}
 
-          <DrawerItem
-            icon={<FaQuestionCircle />}
-            text="Help"
-            onClick={showHelp}
-          />
-          <DrawerItem icon={<FaCog />} text="Settings" onClick={showSettings} />
-          <DrawerItem
-            icon={<FaDiscord />}
-            text="Discord"
-            href="https://discord.gg/jdSBAnmdnY"
-            target="_blank"
-          />
-          <DrawerItem
-            icon={<FaTwitter />}
-            text="Twitter"
-            href="https://twitter.com/asimdotshrestha/status/1644883727707959296"
-            target="_blank"
-          />
-          <DrawerItem
-            icon={<FaGithub />}
-            text="GitHub"
-            href="https://github.com/reworkd/AgentGPT"
-            target="_blank"
-          />
+          <DrawerItem icon={<FaCog />} text="设置" onClick={showSettings} />
         </div>
       </div>
     </>
@@ -192,7 +168,7 @@ const AuthItem: React.FC<{
   signOut: () => void;
 }> = ({ signIn, signOut, session }) => {
   const icon = session?.user ? <FaSignInAlt /> : <FaSignOutAlt />;
-  const text = session?.user ? "Sign Out" : "Sign In";
+  const text = session?.user ? "登录" : "退出";
   const onClick = session?.user ? signOut : signIn;
 
   return <DrawerItem icon={icon} text={text} onClick={onClick} />;

@@ -90,7 +90,7 @@ const ChatWindow = ({ messages, children, className }: ChatWindowProps) => {
                 message={{
                   type: "system",
                   value:
-                    "> Create an agent by adding a name / goal, and hitting deploy!",
+                    "> 一键生成任务!",
                 }}
               />
             </Expand>
@@ -99,7 +99,7 @@ const ChatWindow = ({ messages, children, className }: ChatWindowProps) => {
                 message={{
                   type: "system",
                   value:
-                    "📢 You can first provide your own OpenAI API key via the settings tab!",
+                    "📢 若ChatGPT 算力不够可能造成生成任务失败!",
                 }}
               />
             </Expand>
