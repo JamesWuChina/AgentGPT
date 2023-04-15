@@ -195,22 +195,22 @@ class AutonomousAgent {
       type: "system",
       value:
         this.modelSettings.customApiKey !== ""
-          ? `Õâ¸öÈÎÎñÌ«´óÁËËãÁ¦²»¹».`
-          : "ÇëÖØĞÂÉèÖÃChatGPT KeyID.",
+          ? `è¿™ä¸ªä»»åŠ¡å¤ªå¤§äº†ç®—åŠ›ä¸å¤Ÿ.`
+          : "è¯·é‡æ–°è®¾ç½®ChatGPT KeyID.",
     });
   }
 
   sendManualShutdownMessage() {
     this.sendMessage({
       type: "system",
-      value: `ÈÎÎñ±»ÊÖ¹¤Í£Ö¹.`,
+      value: `ä»»åŠ¡è¢«æ‰‹å·¥åœæ­¢.`,
     });
   }
 
   sendCompletedMessage() {
     this.sendMessage({
       type: "system",
-      value: "ÈÎÎñÍê³É.",
+      value: "ä»»åŠ¡å®Œæˆ.",
     });
   }
 
@@ -229,7 +229,7 @@ class AutonomousAgent {
   sendExecutionMessage(task: string, execution: string) {
     this.sendMessage({
       type: "action",
-      info: `ÕıÔÚÖ´ĞĞ "${task}"`,
+      info: `æ­£åœ¨æ‰§è¡Œ "${task}"`,
       value: execution,
     });
   }
