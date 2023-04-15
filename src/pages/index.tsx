@@ -175,7 +175,7 @@ const Home: NextPage = () => {
                   }
                   disabled={agent != null}
                   value={goalInput}
-                  onChange={(e) => setGoalInput(e.target.value)}
+                  onChange={(e) => setGoalInput("请用中文"+e.target.value)}
                   placeholder="填写你的任务目标."
                 />
               </Expand>
