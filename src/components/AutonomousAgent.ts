@@ -106,7 +106,7 @@ class AutonomousAgent {
       this.tasks = this.tasks.concat(newTasks);
       for (const task of newTasks) {
         await new Promise((r) => setTimeout(r, 800));
-        this.sendTaskMessage(task);
+        this.sendTaskMessage("请用中文,"+task);
       }
 
       if (newTasks.length == 0) {
