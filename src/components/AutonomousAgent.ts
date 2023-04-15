@@ -106,7 +106,7 @@ class AutonomousAgent {
       this.tasks = this.tasks.concat(newTasks);
       for (const task of newTasks) {
         await new Promise((r) => setTimeout(r, 800));
-        this.sendTaskMessage("请用中文,"+task);
+        this.sendTaskMessage(task);
       }
 
       if (newTasks.length == 0) {
@@ -130,7 +130,7 @@ class AutonomousAgent {
 
     const res = await axios.post(`/api/chain`, {
       modelSettings: this.modelSettings,
-      goal: "请用中文,"+this.goal,
+      goal: this.goal,
     });
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-argument
