@@ -206,7 +206,7 @@ const Home: NextPage = () => {
                 {shouldAgentStop ? (
                   <>
                     <VscLoading className="animate-spin" size={20} />
-                    <span className="ml-2">Stopping</span>
+                    <span className="ml-2">正在停止</span>
                   </>
                 ) : (
                   "停止任务"

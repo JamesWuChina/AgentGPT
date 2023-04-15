@@ -216,7 +216,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
 
       {message.type == "thinking" && (
         <span className="italic text-zinc-400">
-          (Restart if this takes more than 30 seconds)
+          (因算力不稳定，这个任务若执行时间太长会重启)
         </span>
       )}
 

@@ -195,22 +195,22 @@ class AutonomousAgent {
       type: "system",
       value:
         this.modelSettings.customApiKey !== ""
-          ? `This agent has been running for too long (25 Loops). To save your wallet this agent is shutting down. In the future, the number of iterations will be configurable.`
-          : "We're sorry, because this is a demo, we cannot have our agents running for too long. Note, if you desire longer runs, please provide your own API key in Settings. Shutting down.",
+          ? `这个任务太大了算力不够.`
+          : "请重新设置ChatGPT KeyID.",
     });
   }
 
   sendManualShutdownMessage() {
     this.sendMessage({
       type: "system",
-      value: `The agent has been manually shutdown.`,
+      value: `任务被手工停止.`,
     });
   }
 
   sendCompletedMessage() {
     this.sendMessage({
       type: "system",
-      value: "All tasks completed. Shutting down.",
+      value: "任务完成.",
     });
   }
 
@@ -229,7 +229,7 @@ class AutonomousAgent {
   sendExecutionMessage(task: string, execution: string) {
     this.sendMessage({
       type: "action",
-      info: `Executing "${task}"`,
+      info: `正在执行 "${task}"`,
       value: execution,
     });
   }
