@@ -69,7 +69,7 @@ const Home: NextPage = () => {
 
   const handleAddMessage = (message: Message) => {
     if (message.type == "task") {
-      setTasks((tasks) => [...tasks, "请用中文"+message.value]);
+      setTasks((tasks) => [...tasks, message.value]);
     }
     setMessages((prev) => [...prev, message]);
   };
