@@ -27,7 +27,7 @@ const Task = ({ task }: { task: string }) => {
   return (
     <FadeIn delay={1}>
       <div className="w-full rounded-md border-2 border-white/20 p-2 text-sm text-white hover:border-white/40">
-        {task.slice(9)}
+        {task.slice(4)}
       </div>
     </FadeIn>
   );
