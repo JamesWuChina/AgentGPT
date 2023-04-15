@@ -132,12 +132,12 @@ const Home: NextPage = () => {
             >
               <div className="flex flex-row items-start shadow-2xl">
                 <span className="text-4xl font-bold text-[#C0C0C0] xs:text-5xl sm:text-6xl">
-                  青岛敏诚测试
+                  青岛敏诚技术部
                 </span>
                 <span className="text-4xl font-bold text-white xs:text-5xl sm:text-6xl">
                   GPT
                 </span>
-                <PopIn delay={0.5} className="sm:absolute sm:right-0 sm:top-2">
+                <PopIn delay={0.5} className="sm:absolute sm:right-10 sm:top-2">
                   <Badge>Beta 🚀</Badge>
                 </PopIn>
               </div>
@@ -190,7 +190,7 @@ const Home: NextPage = () => {
                 className="sm:mt-10"
               >
                 {agent == null ? (
-                  "Deploy Agent"
+                  "开始任务"
                 ) : (
                   <>
                     <VscLoading className="animate-spin" size={20} />
@@ -211,7 +211,7 @@ const Home: NextPage = () => {
                     <span className="ml-2">Stopping</span>
                   </>
                 ) : (
-                  "Stop agent"
+                  "停止任务"
                 )}
               </Button>
             </Expand>
