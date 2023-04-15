@@ -69,7 +69,7 @@ const Home: NextPage = () => {
 
   const handleAddMessage = (message: Message) => {
     if (message.type == "task") {
-      setTasks((tasks) => [...tasks, message.value]);
+      setTasks((tasks) => [...tasks, "请用中文"+message.value]);
     }
     setMessages((prev) => [...prev, message]);
   };
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
                   }
                   disabled={agent != null}
                   value={goalInput}
-                  onChange={(e) => setGoalInput("请用中文"+e.target.value)}
+                  onChange={(e) => setGoalInput(e.target.value)}
                   placeholder="填写你的任务目标."
                 />
               </Expand>
